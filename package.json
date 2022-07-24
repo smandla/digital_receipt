@@ -1,0 +1,18 @@
+{
+  "name": "20-stu_inquirer-users",
+  "version": "1.0.0",
+  "description": "Work with a partner to implement the following user story:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.4",
+    "request": "^2.88.2"
+  }
+}
