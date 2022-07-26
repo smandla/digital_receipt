@@ -25,6 +25,11 @@ app.get("/", (req, res) => {
   //   console.log(__dirname);
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
+app.get("/saveReceipt", (req, res) => {
+  console.log("in here");
+  //   console.log(__dirname);
+  res.sendFile(path.join(__dirname, "/public/saveReceipt.html"));
+});
 app.post("/upload", (req, res) => {
   var newData;
   // TODO: process the file upload
@@ -71,11 +76,7 @@ app.post("/upload", (req, res) => {
 
   res.send(noteData);
 });
-app.get("/notes", (req, res) => {
-  console.log("in here");
-  //   console.log(__dirname);
-  res.sendFile(path.join(__dirname, "/public/notes.html"));
-});
+
 app.get("/api/notes", (req, res) => res.json(noteData));
 app.post("/api/notes", (req, res) => {
   const { title, text, file } = req.body;
