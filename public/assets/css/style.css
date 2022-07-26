@@ -94,8 +94,11 @@ nav {
   font-size: 20px;
   cursor: pointer;
   color: black;
-  border: 4px dashed #31ece6;
-  border-radius: 8px;
+  /* border: 4px dashed #31ece6;
+  border-radius: 8px; */
+}
+.receipt_display > .row {
+  margin: 0;
 }
 .drop-zone {
   width: 60%;
