@@ -1,6 +1,21 @@
 const buttonEl = $("#submit_btn");
 const fileEl = $("#file");
 
+const getLatestReceipt = async () => {
+  const response = await fetch("/api/receipt", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  const receiptJson = await response.json();
+  console.log(receiptJson);
+};
+
+// const getAndRenderReceipt = () => getLatestReceipt().then(renderReceipt);
+console.log(window.location.pathname);
+if (window.location.pathname === "/saveReceipt") {
+  console.log("in save receipt");
+  getLatestReceipt();
+}
 const dropZoneInputEl = document.querySelector(".drop-zone__input");
 const dropZoneElement = dropZoneInputEl.closest(".drop-zone");
 dropZoneElement.addEventListener("click", (e) => {
@@ -66,32 +81,27 @@ buttonEl.on("click", (e) => {
   newReceipt.append("file", fileVal);
   console.log(newReceipt);
 
-  document.location.replace(`./saveReceipt`);
-  if (window.location.pathname === "/saveReceipt") {
-    console.log();
-    // saveReceipt(newReceipt);
-  }
+  saveReceipt(newReceipt);
+
+  console.log(window.location.pathname);
+  window.location.pathname = "/saveReceipt";
+  // console.log(window.location.pathname);
 });
+const renderReceipt = async (receipt) => {
+  let jsonReceipt = await receipt.json();
+  console.log(jsonReceipt);
+  return jsonReceipt;
+  // if (window.location.pathname === "/saveReceipt") {
+  //   console.log(jsonReceipt);
+  // }
+};
+
 const saveReceipt = (receipt) => {
   console.log(receipt);
   fetch("/upload", {
     method: "POST",
     body: receipt,
-  })
-    .then((result) => {
-      if (result.status != 200) {
-        throw new Error("Bad Server Response");
-      }
-      return result.text();
-    })
-    .then((response) => {
-      console.log(response);
-    })
-
-    // (E) HANDLE ERRORS - OPTIONS
-    .catch((error) => {
-      console.log(error);
-    });
+  });
 
   // (F) PR;
 };
