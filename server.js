@@ -30,6 +30,9 @@ app.get("/saveReceipt", (req, res) => {
   //   console.log(__dirname);
   res.sendFile(path.join(__dirname, "/public/saveReceipt.html"));
 });
+app.get("/api/receipt", (req, res) => {
+  res.json(noteData[noteData.length - 1]);
+});
 app.post("/upload", (req, res) => {
   var newData;
   // TODO: process the file upload
