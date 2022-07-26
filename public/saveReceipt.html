@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg justify-content-between">
+        <a class="navbar-brand" href="#">Digital Receipt</a>
+
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">All Receipts</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="submit_receipt">
+        <div class="receipt_info">
+          <div class="drop-zone">
+            <span class="drop-zone__prompt"
+              >Drop file here or click to upload</span
+            >
+
+            <input
+              id="file"
+              type="file"
+              name="myFile"
+              class="drop-zone__input"
+              enctype="multipart/form-data"
+            />
+          </div>
+          <div class="receipt_display">
+            <div class="card">
+              <div class="card-body">
+                <div class="container">
+                  <p class="bg-dark" stye="font-size: 30px;">Walmart</p>
+                  <hr />
+                  <p class="text-black">$44.23</p>
+                  <hr />
+                  <div class="row bg-primary justify-content-around">
+                    <p>Pro Package</p>
+                    <p>$199.00</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row bg-primary justify-content-around">
+                    <p>Pro Package</p>
+                    <p>$199.00</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row bg-primary justify-content-around">
+                    <p>Pro Package</p>
+                    <p>$199.00</p>
+                    <p>$199.00</p>
+                  </div>
+                  <hr />
+                  <div class="row bg-primary justify-content-between">
+                    <p>SUBTOTAL</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row bg-primary justify-content-between">
+                    <p>TAX</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row bg-primary justify-content-between">
+                    <p>TOTAL</p>
+                    <p>$199.00</p>
+                  </div>
+                  <hr />
+                  <div>
+                    <div class="row">
+                      <p>PURCHASE DETAILS</p>
+                    </div>
+                    <div class="row justify-content-between">
+                      <p>ITEMS PURCHASED</p>
+                      <p>20</p>
+                    </div>
+                    <div class="row justify-content-between">
+                      <p>PURCHASED DATE</p>
+                      <p>03/03/2022</p>
+                    </div>
+                    <div class="row justify-content-between">
+                      <p>PURCHASED FROM</p>
+                      <p>1234 Walmart Way</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submit_btn" class="submit_btn">
+          save receipt
+        </button>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
