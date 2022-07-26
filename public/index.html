@@ -4,20 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header><h1>Digital Receipt</h1></header>
-    <form id="form">
-      <div class="form-group">
-        <input
-          id="file"
-          type="file"
-          name="myFile"
-          enctype="multipart/form-data"
-        />
-        <button type="submit" id="submit_btn">submit</button>
-      </div>
-    </form>
+    <header>
+      <nav class="navbar navbar-expand-lg justify-content-around">
+        <a class="navbar-brand" href="#">Digital Receipt</a>
+
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#"
+            >Recently Added<span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="#">Categories</a>
+          <a class="nav-item nav-link" href="#">Edit</a>
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form id="form" class="form">
+        <div class="form-group">
+          <input
+            id="file"
+            type="file"
+            name="myFile"
+            enctype="multipart/form-data"
+          />
+          <button type="submit" id="submit_btn">submit</button>
+        </div>
+      </form>
+    </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
