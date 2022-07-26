@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 app.post("/upload", (req, res) => {
+  var newData;
   // TODO: process the file upload
   console.log(req.files.file);
   if (!req.files) {
@@ -40,7 +41,7 @@ app.post("/upload", (req, res) => {
     if (err) {
       return res.status(500).send(err);
     }
-    return res.send({ status: "success", path: path });
+    // return res.send({ path: path });
   });
   request.post(
     {
@@ -49,24 +50,26 @@ app.post("/upload", (req, res) => {
         client_id: "TEST", // Use 'TEST' for testing purpose
         recognizer: "auto", // can be 'US', 'CA', 'JP', 'SG' or 'auto'
         ref_no: "ocr_nodejs_123", // optional caller provided ref code
-        file: fs.createReadStream(name), // the image file
+        file: fs.createReadStream(file.name), // the image file
       },
     },
     function (error, response, body) {
       if (error) {
+        console.log("ERROR");
         console.error(error);
       }
       console.log("BODY", body); // Receipt OCR result in JSON
-      const newData = { file: body };
-      console.log(newData);
+      newData = { file: JSON.parse(body) };
+      console.log("NEW DATA", newData);
       noteData.push(newData);
-      console.log(noteData);
+      console.log("NOTEDATA", noteData);
       fs.writeFile("./db/db.json", JSON.stringify(noteData), (err) =>
         err ? console.error(err) : console.log("success")
       );
     }
   );
-  // res.send(noteData);
+
+  res.send(noteData);
 });
 app.get("/notes", (req, res) => {
   console.log("in here");

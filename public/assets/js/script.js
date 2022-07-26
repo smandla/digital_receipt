@@ -4,23 +4,35 @@ const fileEl = $("#file");
 buttonEl.on("click", (e) => {
   e.preventDefault();
   const fileVal = fileEl[0].files[0];
-  console.log(fileVal);
-  const newReceipt = {
-    file: fileVal,
-  };
+  console.log("fileVAL", fileVal);
+  let newReceipt = new FormData();
+  newReceipt.append("file", fileVal);
   console.log(newReceipt);
-  saveReceipt(fileVal).then(() => {
+  saveReceipt(newReceipt).then(() => {
     console.log("done");
   });
 });
-const saveReceipt = async (receipt) => {
+const saveReceipt = (receipt) => {
   console.log(receipt);
-  await fetch("/api/receipt", {
+  fetch("/upload", {
     method: "POST",
-    header: {
-      "Content-Type": "multipart/form-data",
-    },
-    body: new FormData(receipt),
-  });
+    body: receipt,
+  })
+    .then((result) => {
+      if (result.status != 200) {
+        throw new Error("Bad Server Response");
+      }
+      return result.text();
+    })
+    .then((response) => {
+      console.log(response);
+    })
+
+    // (E) HANDLE ERRORS - OPTIONS
+    .catch((error) => {
+      console.log(error);
+    });
+
+  // (F) PR;
 };
 function init() {}
