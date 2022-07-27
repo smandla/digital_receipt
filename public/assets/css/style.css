@@ -100,6 +100,15 @@ nav {
 .receipt_display > .row {
   margin: 0;
 }
+.receipt_customization {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.receipt_customization > p {
+  margin: 0;
+}
 .drop-zone {
   width: 60%;
   height: 70%;
