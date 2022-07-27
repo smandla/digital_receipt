@@ -108,6 +108,7 @@ nav {
 }
 .receipt_customization > p {
   margin: 0;
+  font-size: 20px;
 }
 .drop-zone {
   width: 60%;

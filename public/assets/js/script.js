@@ -1,8 +1,14 @@
 const buttonEl = $("#submit_btn");
 const fileEl = $("#file");
 
+// Toggles dropdown menu
 $(document).ready(function() {
   $(".dropdown-toggle").dropdown();
+});
+// Changes dropdown menu value text depending on user selection
+$(".dropdown-menu a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
 });
 
 const getLatestReceipt = async () => {
