@@ -37,3 +37,29 @@ button {
 .card {
   color: black;
 }
+.card-header {
+  display: flex;
+  /* background: red; */
+}
+.btn-actions-pane-right {
+  margin-left: auto;
+  white-space: nowrap;
+  /* display: inline; */
+  float: right;
+  /* background: red; */
+}
+.btn-focus {
+  color: #fff;
+  background-color: #444054;
+  border-color: #444054;
+}
+.main-card {
+  margin-top: 2rem;
+}
+.sidebar {
+  background: #333333;
+  max-height: 100%;
+}
+a {
+  background: none;
+}

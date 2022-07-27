@@ -35,6 +35,9 @@ app.get("/allReceipts", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/allReceipts.html"));
 });
 
+app.get("/dashboard", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/dashboard.html"));
+});
 app.get("/api/receipt", (req, res) => {
   res.json(noteData[noteData.length - 1]);
 });
