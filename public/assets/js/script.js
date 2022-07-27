@@ -1,6 +1,10 @@
 const buttonEl = $("#submit_btn");
 const fileEl = $("#file");
 
+$(document).ready(function() {
+  $(".dropdown-toggle").dropdown();
+});
+
 const getLatestReceipt = async () => {
   const response = await fetch("/api/receipt", {
     method: "GET",
