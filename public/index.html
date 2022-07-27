@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Receipt</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Receipt</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg justify-content-between">
+        <a class="navbar-brand" href="#">Digital Receipt</a>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg justify-content-between">
-      <a class="navbar-brand" href="#">Digital Receipt</a>
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="./allReceipts"
+            >All Receipts</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="submit_receipt">
+        <div class="drop-zone">
+          <span class="drop-zone__prompt"
+            >Drop file here or click to upload</span
+          >
 
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">All Receipts</a>
+          <input
+            id="file"
+            type="file"
+            name="myFile"
+            class="drop-zone__input"
+            enctype="multipart/form-data"
+          />
+        </div>
+        <button type="submit" id="submit_btn" class="submit_btn">
+          Digitalize
+        </button>
       </div>
-    </nav>
-  </header>
-  <main>
-    <div class="submit_receipt">
-      <div class="drop-zone">
-        <span class="drop-zone__prompt">Drop file here or click to upload</span>
+    </main>
 
-        <input id="file" type="file" name="myFile" class="drop-zone__input" enctype="multipart/form-data" />
-      </div>
-      <button type="submit" id="submit_btn" class="submit_btn">
-        Digitalize
-      </button>
-    </div>
-  </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./assets/js/script.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
