@@ -199,6 +199,9 @@ nav {
     margin: 0;
     max-height: 100%;
   }
+  .drop-zone {
+    margin-bottom: 25px;
+  }
   #submit_btn {
     margin: 0;
   }
