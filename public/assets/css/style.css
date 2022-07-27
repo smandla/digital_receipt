@@ -26,7 +26,7 @@ header {
   justify-content: center;
 }
 
-main {
+.main {
   position: fixed;
   top: 120px;
   width: 100%;
@@ -206,3 +206,5 @@ nav {
     margin: 0;
   }
 }
+
+/* ************************************************ */
