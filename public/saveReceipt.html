@@ -9,135 +9,148 @@
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg justify-content-between">
-        <a class="navbar-brand" href="#">Digital Receipt</a>
-
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="/allReceipts"
-            >All Receipts</a
-          >
+    <div class="container-fluid fill">
+      <div class="row page">
+        <div class="col-md-2 sidebar p-4">
+          <i class="fa-solid fa-2xl d-flex align-items-center justify-content-center fa-user p-4"></i>
+          <a class="d-flex align-items-center justify-content-center" href="#">Admin<span class="sr-only">(current)</span></a>
+          <hr/>
+          <ul class="flex-column">
+            <li class="nav-item">
+              <a class=" active" href="/dashboard"><h4>Receipts</h4></a>
+            </li>
+          </ul>
+          <section class="fixed-bottom position-absolute mb-2">
+            <div class="d-flex align-items-center justify-content-around">
+              <i class="fa-solid fa-2xl fa-receipt"></i>
+              <h4>DIGITAL RECEIPT</h4>
+            </div>
+          </section>
         </div>
-      </nav>
-    </header>
-    <main class="main">
-      <div class="submit_receipt">
-        <div class="receipt_info">
-          <div class="receipt_display">
-            <!-- <div class="card"> -->
-            <!-- <div class="card-body"> -->
-            <div class="container bg-white">
-              <p>Walmart</p>
-              <hr />
-              <!-- <p class="text-black">$44.23</p>
-                <hr /> -->
-              <div class="row justify-content-around">
-                <p>Pro Package</p>
-                <p>$199.00</p>
-                <p>$199.00</p>
-              </div>
-              <div class="row justify-content-around">
-                <p>Pro Package</p>
-                <p>$199.00</p>
-                <p>$199.00</p>
-              </div>
-              <div class="row justify-content-around">
-                <p>Pro Package</p>
-                <p>$199.00</p>
-                <p>$199.00</p>
-              </div>
-              <hr />
-              <div class="row justify-content-between">
-                <p>SUBTOTAL</p>
-                <p>$199.00</p>
-              </div>
-              <div class="row justify-content-between">
-                <p>TAX</p>
-                <p>$199.00</p>
-              </div>
-              <div class="row justify-content-between">
-                <p>TOTAL</p>
-                <p>$199.00</p>
-              </div>
-              <hr />
-              <div>
-                <div class="row">
-                  <p>PURCHASE DETAILS</p>
+     
+      <div class="col-md-10 ">
+        <main class="main">
+            <div class="receipt_info">
+              <div class="receipt_display">
+                <!-- <div class="card"> -->
+                <!-- <div class="card-body"> -->
+                <div class="container bg-white">
+                  <p>Walmart</p>
+                  <hr />
+                  <!-- <p class="text-black">$44.23</p>
+                    <hr /> -->
+                  <div class="row justify-content-around">
+                    <p>Pro Package</p>
+                    <p>$199.00</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row justify-content-around">
+                    <p>Pro Package</p>
+                    <p>$199.00</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row justify-content-around">
+                    <p>Pro Package</p>
+                    <p>$199.00</p>
+                    <p>$199.00</p>
+                  </div>
+                  <hr />
+                  <div class="row justify-content-between">
+                    <p>SUBTOTAL</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row justify-content-between">
+                    <p>TAX</p>
+                    <p>$199.00</p>
+                  </div>
+                  <div class="row justify-content-between">
+                    <p>TOTAL</p>
+                    <p>$199.00</p>
+                  </div>
+                  <hr />
+                  <div>
+                    <div class="row">
+                      <p>PURCHASE DETAILS</p>
+                    </div>
+                    <div class="row justify-content-between">
+                      <p>ITEMS PURCHASED</p>
+                      <p>20</p>
+                    </div>
+                    <div class="row justify-content-between">
+                      <p>PURCHASED DATE</p>
+                      <p>03/03/2022</p>
+                    </div>
+                    <div class="row justify-content-between">
+                      <p>PURCHASED FROM</p>
+                      <p>1234 Walmart Way</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="row justify-content-between">
-                  <p>ITEMS PURCHASED</p>
-                  <p>20</p>
+                <!-- </div> -->
+                <!-- </div> -->
+              </div>
+              <div class="receipt_customization">
+                <p>Select a Category</p>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Categories
+                    <span class="caret"></span>
+                  </button>
+                  <div
+                    class="dropdown-menu btn-lg dropdown-menu-right"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item" href="#" data-value="Food">Food</a>
+                    <a class="dropdown-item" href="#" data-value="Housing"
+                      >Housing</a
+                    >
+                    <a class="dropdown-item" href="#" data-value="Utilities"
+                      >Utilities</a
+                    >
+                    <a class="dropdown-item" href="#" data-value="Education"
+                      >Education</a
+                    >
+                    <a class="dropdown-item" href="#" data-value="Transportation"
+                      >Transportation</a
+                    >
+                    <a class="dropdown-item" href="#" data-value="Medical"
+                      >Medical</a
+                    >
+                    <a class="dropdown-item" href="#" data-value="Other">Other</a>
+                  </div>
                 </div>
-                <div class="row justify-content-between">
-                  <p>PURCHASED DATE</p>
-                  <p>03/03/2022</p>
-                </div>
-                <div class="row justify-content-between">
-                  <p>PURCHASED FROM</p>
-                  <p>1234 Walmart Way</p>
-                </div>
+                <button type="submit" id="submit_btn" class="submit_btn">
+                  Save Receipt
+                </button>
               </div>
             </div>
-            <!-- </div> -->
-            <!-- </div> -->
-          </div>
-          <div class="receipt_customization">
-            <p>Select a Category</p>
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Categories
-                <span class="caret"></span>
-              </button>
-              <div
-                class="dropdown-menu btn-lg dropdown-menu-right"
-                aria-labelledby="dropdownMenuButton"
-              >
-                <a class="dropdown-item" href="#" data-value="Food">Food</a>
-                <a class="dropdown-item" href="#" data-value="Housing"
-                  >Housing</a
-                >
-                <a class="dropdown-item" href="#" data-value="Utilities"
-                  >Utilities</a
-                >
-                <a class="dropdown-item" href="#" data-value="Education"
-                  >Education</a
-                >
-                <a class="dropdown-item" href="#" data-value="Transportation"
-                  >Transportation</a
-                >
-                <a class="dropdown-item" href="#" data-value="Medical"
-                  >Medical</a
-                >
-                <a class="dropdown-item" href="#" data-value="Other">Other</a>
-              </div>
-            </div>
-            <button type="submit" id="submit_btn" class="submit_btn">
-              Save Receipt
-            </button>
-          </div>
-        </div>
+        </main>
       </div>
-    </main>
+    </div>
+   
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
